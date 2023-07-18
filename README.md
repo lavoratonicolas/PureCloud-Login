@@ -8,7 +8,7 @@ Extensión para navegadores basados en Chromium (Google Chrome, Brave, Opera, et
 
 
 # ¿Cómo instalar la extensión?
-* Descargar el repositorio y dejarlo descomprimido en una carpeta
+* Descargar la carpeta "purecloud-login" del repositorio y dejarla descomprimida
 * Editar el archivo que se encuentra en la carpeta "js > content-script.js" y remplazar la frase `aca-va-el-org-id` por el ID de la organización principal partner de Genesys
 * En el navegador ir a la siguiente URL `chrome://extensions/`
 * Habilitar la opción "Modo de desarrollador"
