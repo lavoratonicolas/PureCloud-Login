@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body style="filter: blur(10px); transition:  0.3s -webkit-filter linear; pointer-events: none;">
+    <div class="clients-area">
+        <div class="top-buttons">
+            <figure title="Recargar clientes" id="refresh-btn" class="btn refresh-btn">
+                <img src="/images/refresh-outline.svg" />
+                <figcaption class="sub-text">Recargar</figcaption>
+            </figure>
+
+            <figure title="Editar conexion" id="edit-github-btn" class="btn edit-github-btn">
+                <img src="/images/logo-github.svg" />
+                <figcaption class="sub-text">Repo</figcaption>
+            </figure>
+        </div>
+
+        <div class="clients-list">
+            <input type="text" class="search-bar" id="search-customer" placeholder="Buscar cliente" title="Buscador"
+                autofocus>
+            <select class="list-box" id="select-customer" size="999">
+            </select>
+        </div>
+
+        <div class="clients-actions">
+            <figure title="Conectar" id="connect-customer-btn" class="btn connect-customer-btn">
+                <img src="/images/paper-plane-outline.svg" />
+                <figcaption class="sub-text">Conectar</figcaption>
+            </figure>
+
+            <figure title="Editar cliente" id="form-edit-customer-btn" class="btn form-edit-customer-btn">
+                <img src="/images/create-outline.svg" />
+                <figcaption class="sub-text">Editar</figcaption>
+            </figure>
+
+            <figure title="Añadir cliente" id="form-add-customer-btn" class="btn form-add-customer-btn">
+                <img src="/images/add-outline.svg" />
+                <figcaption class="sub-text">Añadir</figcaption>
+            </figure>
+
+            <figure title="Eliminar cliente" id="delete-customer-btn" class="btn delete-customer-btn">
+                <img src="/images/trash-outline.svg" />
+                <figcaption class="sub-text">Eliminar</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div id="div-github-form" class="github-form-div" style="display: none;">
+        <form id="form-github-connection" class="github-form">
+            <ul>
+                <li>
+                    <input type="text" id="furl" name="furl" autocomplete="off" class="furl" placeholder="URL">
+                </li>
+
+                <li>
+                    <input type="text" id="ftoken" name="ftoken" autocomplete="off" class="ftoken" placeholder="Token">
+                </li>
+
+                <li>
+                    <input type="text" id="fkey" name="fkey" autocomplete="off" class="fkey"
+                        placeholder="Actual llave de desencriptado">
+                </li>
+                <li>
+                    <button type="button" class="real-btn" id="ltemplate" style="display: none;">
+                        Cargar template vacio
+                    </button>
+                </li>
+            </ul>
+        </form>
+
+        <div class="github-form-btn">
+            <figure title="Guardar cambios" id="save-github-btn" class="btn save-github-btn">
+                <img src="/images/save-outline.svg" />
+                <figcaption class="sub-text">Guardar</figcaption>
+            </figure>
+
+            <figure title="Cancelar" id="cancel-github-btn" class="btn cancel-github-btn" style="display: none;">
+                <img src="/images/close-outline.svg" />
+                <figcaption class="sub-text">Cancelar</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div id="div-form" class="add-edit-customer-div" style="display: none;">
+        <form id="form-add-customer" class="add-edit-customer-form">
+            <ul>
+                <li>
+                    <select id="connectiontypelist">
+                        <option value="direct">Directa</option>
+                        <option value="byorg">Mediante mi Org</option>
+                    </select>
+                </li>
+
+                <li>
+                    <input type="text" id="fname" name="fname" autocomplete="off" class="fname"
+                        placeholder="Nombre del cliente">
+                </li>
+
+                <li>
+                    <input type="text" id="forganizationid" name="forganizationid" autocomplete="off"
+                        class="forganizationid" disabled placeholder="Organizacion Id">
+                </li>
+
+                <li>
+                    <input type="text" id="fbridge" name="fbridge" autocomplete="off" list="bridgelist" class="fbridge"
+                        disabled placeholder="Cuenta puente">
+                    <datalist id="bridgelist">
+                    </datalist>
+                </li>
+
+                <li>
+                    <input type="text" id="fregion" name="fregion" list="regionslist" autocomplete="off"
+                        placeholder="Region">
+                    <datalist id="regionslist">
+                    </datalist>
+                </li>
+
+                <li>
+                    <input type="text" id="forganization" name="forganization" autocomplete="off"
+                        placeholder="Nombre de la organizacion">
+                </li>
+
+                <li>
+                    <input type="text" id="femail" name="femail" autocomplete="off" placeholder="Correo">
+                </li>
+
+                <li>
+                    <input type="text" id="fpassword" name="fpassword" autocomplete="off" placeholder="Contraseña">
+                </li>
+            </ul>
+        </form>
+
+        <div class="add-edit-customer-btn">
+            <figure title="Añadir cliente" id="add-customer-btn" class="btn add-customer-btn">
+                <img src="/images/person-add-outline.svg" />
+                <figcaption class="sub-text">Añadir</figcaption>
+            </figure>
+
+            <figure title="Guardar cambios" id="edit-customer-btn" class="btn edit-customer-btn">
+                <img src="/images/save-outline.svg" />
+                <figcaption class="sub-text">Guardar</figcaption>
+            </figure>
+
+            <figure title="Cancelar" id="cancel-btn" class="btn cancel-btn">
+                <img src="/images/close-outline.svg" />
+                <figcaption class="sub-text">Cancelar</figcaption>
+            </figure>
+        </div>
+    </div>
+
+
+    <script src="/js/popup.js"></script>
+</body>
+
+</html>

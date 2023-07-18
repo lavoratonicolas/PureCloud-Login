@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "PureCloud Login",
+    "description": "Administra y logueate a los clientes de PureCloud en un click",
+    "version": "1.6.1",
+    "action": {
+        "default_popup": "popup.html",
+        "type": "module",
+        "default_icon": {
+            "16": "/icons/16.png",
+            "32": "/icons/32.png",
+            "64": "/icons/64.png",
+            "128": "/icons/128.png"
+        }
+    },
+    "icons": {
+        "16": "/icons/16.png",
+        "32": "/icons/32.png",
+        "64": "/icons/64.png",
+        "128": "/icons/128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.mypurecloud.com/*",
+                "https://*.use2.us-gov-pure.cloud/*",
+                "https://*.usw2.pure.cloud/*",
+                "https://*.cac1.pure.cloud/*",
+                "https://*.sae1.pure.cloud/*",
+                "https://*.mypurecloud.de/*",
+                "https://*.mypurecloud.ie/*",
+                "https://*.euw2.pure.cloud/*",
+                "https://*.aps1.pure.cloud/*",
+                "https://*.apne2.pure.cloud/*",
+                "https://*.mypurecloud.com.au/*",
+                "https://*.mypurecloud.jp/*"
+            ],
+            "js": [
+                "/js/content-script.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ]
+}
