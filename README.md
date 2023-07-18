@@ -4,7 +4,7 @@ Extensión para navegadores basados en Chromium (Google Chrome, Brave, Opera, et
 
 # Requisitos:
 * Crear un archivo vacío en un repositorio de GitHub
-* Generar un [access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) que tenga permiso de lectura y escritura sobre el archivo creado en el paso anterior
+* Generar un [access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) que tenga permiso de lectura y escritura sobre el archivo creado en el paso anterior (Personal access tokens > Repository permissions > Contents > Read and write)
 
 
 # ¿Cómo instalar la extensión?
